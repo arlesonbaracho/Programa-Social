@@ -1,0 +1,42 @@
+{
+  "name": "programa-social-backend",
+  "version": "1.0.0",
+  "description": "Backend base para gestao de programas sociais municipais.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "db:create": "node src/database/create-database.js",
+    "db:migrate": "node src/database/migrate.js",
+    "db:seed": "node src/database/seed.js",
+    "db:setup": "node src/database/create-database.js && node src/database/migrate.js && node src/database/seed.js",
+    "db:test": "node src/database/test-connection.js",
+    "notifications:process": "node src/notifications/process-notifications.js",
+    "test": "node ./node_modules/jest/bin/jest.js --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/tests"
+    ]
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "multer": "^2.1.1",
+    "nodemailer": "^8.0.5",
+    "pg": "^8.20.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2"
+  }
+}
