@@ -9,9 +9,9 @@
 body {
   @apply min-h-screen bg-shell font-body text-ink antialiased;
   background-image:
-    radial-gradient(circle at top left, rgba(166, 124, 40, 0.12), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(49, 88, 71, 0.14), transparent 36%),
-    linear-gradient(135deg, #f8f3ea 0%, #f1e5ce 100%);
+    radial-gradient(circle at top left, rgba(122, 166, 255, 0.26), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(47, 111, 237, 0.14), transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
 }
 
 #app {
@@ -19,21 +19,21 @@ body {
 }
 
 .panel {
-  @apply rounded-3xl border border-line/60 bg-mist/90 shadow-card backdrop-blur;
+  @apply rounded-[28px] border border-line/70 bg-mist/90 shadow-card backdrop-blur;
 }
 
 .action-button {
-  @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition;
+  @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition duration-200;
 }
 
 .action-button-primary {
-  @apply action-button bg-forest text-white hover:bg-forest/90;
+  @apply action-button bg-forest text-white hover:bg-[#245fe0];
 }
 
 .action-button-secondary {
-  @apply action-button border border-forest/30 bg-white/70 text-forest hover:bg-white;
+  @apply action-button border border-forest/15 bg-sand/70 text-forest hover:bg-white;
 }
 
 .field-input {
-  @apply w-full rounded-2xl border border-line bg-white/80 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink/45 focus:border-forest focus:ring-2 focus:ring-forest/15;
+  @apply w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink/45 focus:border-forest focus:ring-2 focus:ring-forest/15;
 }

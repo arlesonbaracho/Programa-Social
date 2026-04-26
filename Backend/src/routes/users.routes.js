@@ -22,6 +22,10 @@ const updateStatusSchema = Joi.object({
   status: Joi.string().valid("ativo", "inativo", "suspenso").required(),
 });
 
+const updateRoleSchema = Joi.object({
+  tipo: Joi.string().valid("participante", "servidor", "gestor").required(),
+});
+
 function buildUsersRouter({ userService }) {
   const router = express.Router();
 
@@ -59,7 +63,30 @@ function buildUsersRouter({ userService }) {
     validate(updateStatusSchema),
     async (request, response, next) => {
       try {
-        const result = await userService.updateStatus(request.params.id, request.body.status);
+        const result = await userService.updateStatus(
+          request.params.id,
+          request.body.status,
+          request.user,
+        );
+        response.status(200).json(result);
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
+  router.put(
+    "/:id/tipo",
+    authenticate,
+    requireRoles(["gestor"]),
+    validate(updateRoleSchema),
+    async (request, response, next) => {
+      try {
+        const result = await userService.updateRole(
+          request.params.id,
+          request.body.tipo,
+          request.user,
+        );
         response.status(200).json(result);
       } catch (error) {
         next(error);

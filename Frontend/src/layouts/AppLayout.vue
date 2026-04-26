@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen px-4 py-4 md:px-6">
-    <div class="mx-auto grid min-h-[calc(100vh-2rem)] max-w-7xl gap-4 lg:grid-cols-[280px_1fr]">
+    <div class="mx-auto grid min-h-[calc(100vh-2rem)] max-w-7xl gap-4 lg:grid-cols-[290px_1fr]">
       <AppSidebar
         class="hidden lg:flex"
         :title="portalTitle"
@@ -11,8 +11,8 @@
       <div class="flex flex-col gap-4">
         <div class="panel flex items-center justify-between p-4 lg:hidden">
           <div>
-            <p class="text-xs uppercase tracking-[0.28em] text-forest/60">Portal</p>
-            <p class="font-display text-2xl text-forest">{{ portalTitle }}</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-forest/60">Portal</p>
+            <p class="font-display text-2xl text-ink">{{ portalTitle }}</p>
           </div>
           <button class="action-button-secondary" @click="handleLogout">Sair</button>
         </div>

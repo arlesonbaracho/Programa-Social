@@ -1,10 +1,13 @@
 <template>
-  <aside class="panel flex h-full flex-col gap-4 p-5">
+  <aside class="panel flex h-full flex-col gap-5 p-5">
     <div>
-      <p class="text-xs uppercase tracking-[0.3em] text-forest/60">Portal</p>
-      <h1 class="mt-2 font-display text-2xl font-semibold text-forest">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-forest/60">Portal</p>
+      <h1 class="mt-2 font-display text-2xl font-semibold text-ink">
         {{ title }}
       </h1>
+      <p class="mt-2 text-sm leading-6 text-ink/65">
+        Navegue pelos modulos principais e acompanhe tudo em um fluxo simples.
+      </p>
     </div>
 
     <nav class="flex flex-1 flex-col gap-2">
@@ -12,11 +15,11 @@
         v-for="item in items"
         :key="item.to.name"
         :to="item.to"
-        class="rounded-2xl px-4 py-3 text-sm font-medium transition"
+        class="rounded-2xl border px-4 py-3 text-sm font-medium transition"
         :class="
           route.name === item.to.name
-            ? 'bg-forest text-white'
-            : 'bg-white/60 text-ink hover:bg-white'
+            ? 'border-forest bg-forest text-white shadow-lg shadow-forest/20'
+            : 'border-transparent bg-sand/55 text-ink hover:border-line hover:bg-white'
         "
       >
         {{ item.label }}

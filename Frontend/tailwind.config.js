@@ -4,21 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        shell: "#f5efe3",
-        ink: "#1d2a26",
-        clay: "#b15f3d",
-        forest: "#315847",
-        sand: "#e6dcc7",
-        mist: "#f8f3ea",
-        line: "#d6c8ab",
-        gold: "#a67c28",
+        shell: "#f4f8ff",
+        ink: "#16324f",
+        clay: "#ef7d7d",
+        forest: "#2f6fed",
+        sand: "#e8f0ff",
+        mist: "#ffffff",
+        line: "#cfe0ff",
+        gold: "#7aa6ff",
       },
       fontFamily: {
-        display: ["Georgia", "Cambria", "Times New Roman", "serif"],
+        display: ["Trebuchet MS", "Segoe UI", "Tahoma", "sans-serif"],
         body: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
       },
       boxShadow: {
-        card: "0 18px 40px rgba(41, 56, 50, 0.12)",
+        card: "0 18px 48px rgba(47, 111, 237, 0.12)",
       },
     },
   },

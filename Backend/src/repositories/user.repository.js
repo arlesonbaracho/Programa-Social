@@ -161,6 +161,20 @@ function createUserRepository({ db }) {
       return mapUser(result.rows[0]);
     },
 
+    async updateRole(id, tipo, executor) {
+      const runner = buildExecutor(db, executor);
+      const result = await runner.query(
+        `
+          UPDATE usuarios
+          SET tipo = $2::tipo_usuario
+          WHERE id = $1
+          RETURNING *
+        `,
+        [id, tipo],
+      );
+      return mapUser(result.rows[0]);
+    },
+
     async listByRole(tipo, executor) {
       return this.list({ tipo, status: "ativo" }, executor);
     },

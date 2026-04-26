@@ -1,8 +1,8 @@
 <template>
   <article class="panel p-5">
-    <p class="text-xs uppercase tracking-[0.28em] text-forest/55">{{ label }}</p>
+    <p class="text-xs font-semibold uppercase tracking-[0.28em] text-forest/60">{{ label }}</p>
     <p class="mt-4 font-display text-4xl text-ink">{{ value }}</p>
-    <p class="mt-2 text-sm text-ink/65">{{ hint }}</p>
+    <p class="mt-2 text-sm leading-6 text-ink/65">{{ hint }}</p>
   </article>
 </template>
 
